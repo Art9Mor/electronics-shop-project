@@ -23,3 +23,17 @@ def test_calculate_total_price(test_item):
 def test_apply_discount(test_item):
     test_item.apply_discount()
     assert test_item.price == 15_000
+
+
+def test_item_name(test_item):
+    test_item.name = 'Монитор Samsung'
+    assert test_item.name == 'Монитор Sa'
+    test_item.name = 'Samsung'
+    assert test_item.name == 'Samsung'
+
+
+def test_item_string_to_number():
+    assert Item.string_to_number('13') == 13
+    assert Item.string_to_number('666.999') == 666
+    assert Item.string_to_number('To.Cold') is None
+    assert Item.string_to_number('To Old') is None
