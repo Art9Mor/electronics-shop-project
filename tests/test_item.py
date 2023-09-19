@@ -5,15 +5,15 @@ from src.item import Item
 
 @pytest.fixture
 def test_item():
-    return Item("PC", 15_000, 8)
+    return Item("Монитор Samsung", 17000, 3)
 
 
 def test_item_init(test_item):
     assert len(test_item.all) == 1
     assert test_item.pay_rate == 1
-    assert test_item.name == 'PC'
-    assert test_item.price == 15_000
-    assert test_item.quantity == 8
+    assert test_item.name == 'Монитор Samsung'
+    assert test_item.price == 17000
+    assert test_item.quantity == 3
 
 
 def test_calculate_total_price(test_item):
@@ -40,4 +40,4 @@ def test_string_to_number():
 
 
 def test_repr(test_item):
-    assert repr(test_item) == "Item('Смартфон Samsung', 40000, 2)"
+    assert repr(test_item) == "Item('Монитор Samsung', 17000, 3)"
