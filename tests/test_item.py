@@ -17,12 +17,12 @@ def test_item_init(test_item):
 
 
 def test_calculate_total_price(test_item):
-    assert test_item.calculate_total_price() == 120_000
+    assert test_item.calculate_total_price() == 51000
 
 
 def test_apply_discount(test_item):
     test_item.apply_discount()
-    assert test_item.price == 15_000
+    assert test_item.price == 13600.0
 
 
 def test_name(test_item):
@@ -41,3 +41,7 @@ def test_string_to_number():
 
 def test_repr(test_item):
     assert repr(test_item) == "Item('Монитор Samsung', 17000, 3)"
+
+def test_instantiate_from_csv():
+    print(Item.instantiate_from_csv('src/items.csv'))
+    print(Item.all)
