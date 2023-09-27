@@ -49,6 +49,11 @@ class Item:
         """
         self.price *= Item.pay_rate
 
+    def __add__(self, other):
+        if issubclass(other.__class__, self.__class__):
+            return self.quantity + other.quantity
+        return None
+
     @classmethod
     def instantiate_from_csv(cls, path):
         """
