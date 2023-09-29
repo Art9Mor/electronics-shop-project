@@ -42,6 +42,7 @@ def test_string_to_number():
 def test_repr(test_item):
     assert repr(test_item) == "Item('Монитор Samsung', 17000, 3)"
 
+
 def test_instantiate_from_csv():
     print(Item.instantiate_from_csv('src/items.csv'))
     print(Item.all)
