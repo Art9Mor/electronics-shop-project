@@ -2,7 +2,7 @@ from src.item import Item
 
 
 class Phone(Item):
-    def __init__(self, name:str, price:int, quantity:int, number_of_sim:int):
+    def __init__(self, name: str, price: int, quantity: int, number_of_sim: int):
         """
         Создание экземпляров подкласса Phone на основе класса Item
         :param name: одель телефона
@@ -45,4 +45,3 @@ class Phone(Item):
         if value <= 0 and isinstance(value, int):
             raise ValueError('Количество физических SIM-карт должно быть целым числом больше нуля.')
         self.__number_of_sim = value
-
