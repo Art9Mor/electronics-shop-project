@@ -32,17 +32,17 @@ class Keyboard(Item, LanguageMixin):
     @property
     def language(self):
         """
-        Getter of language atribue
-        :return:
+        Getter of language private atribute
+        :return: keyboard layout language
         """
         return self._language
 
     @language.setter
     def language(self, lang):
         """
-        Setter of language atribute
-        :param lang:
-        :return:
+        Setter of language private atribute
+        :param lang: keyboard layout language
+        :return: compliance with language keyboard layout requirements
         """
         if lang not in ('EN', 'RU'):
             raise AttributeError("property 'language' of 'Keyboard' object has no setter")
