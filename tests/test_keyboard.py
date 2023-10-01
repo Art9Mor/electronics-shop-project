@@ -15,6 +15,7 @@ def test_keyboard_init(test_keyboard):
     assert test_keyboard.quantity == 5
     assert test_keyboard.language == "EN"
 
+
 def testng_language_changer(test_keyboard):
     test_keyboard.change_lang()
     assert test_keyboard.language == 'RU'
@@ -24,3 +25,12 @@ def testng_language_changer(test_keyboard):
         test_keyboard.language = 'CH'
     except AttributeError:
         "property 'language' of 'Keyboard' object has no setter"
+
+
+def test_keyboard_str(test_keyboard):
+    assert str(test_keyboard) == 'Dark Project KD87A'
+    assert str(test_keyboard.language) == 'EN'
+
+
+def test_keyboard_repr(test_keyboard):
+    assert repr(test_keyboard) == "Keyboard('Dark Project KD87A', 9600, 5)"
