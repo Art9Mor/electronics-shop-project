@@ -10,7 +10,7 @@ def test_item():
 
 def test_item_init(test_item):
     assert len(test_item.all) == 1
-    assert test_item.pay_rate == 1
+    assert test_item.pay_rate == 0.8
     assert test_item.name == 'Монитор Samsung'
     assert test_item.price == 17000
     assert test_item.quantity == 3
